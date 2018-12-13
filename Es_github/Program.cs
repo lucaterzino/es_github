@@ -10,6 +10,7 @@ namespace Es_github
     {
         static void Main(string[] args)
         {
+            int valore = 0;
             string plainText = " ";
             string base64EncodedData;
 
@@ -25,11 +26,18 @@ namespace Es_github
                 Console.WriteLine(Convert.ToString(plainTextBytes[i], 2));
             }
             base64EncodedData = Convert.ToBase64String(plainTextBytes);
-            Console.WriteLine(base64EncodedData);
-
+            Console.WriteLine($"la codifica in base 64 della parola {plainText} è :{base64EncodedData}");
+            
            byte[] base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
             plainText = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
-            Console.WriteLine(plainText);
+           
+
+            Console.WriteLine("inserisci un numero");
+
+            valore = Convert.ToInt32(Console.ReadLine());
+            char c = Convert.ToChar(valore);
+            Console.WriteLine(c);
+
             Console.ReadLine();
         }
     }
