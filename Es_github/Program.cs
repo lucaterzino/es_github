@@ -10,9 +10,14 @@ namespace Es_github
     {
         static void Main(string[] args)
         {
-            string plainText = "man";
+            string plainText = " ";
             string base64EncodedData;
+
+            Console.WriteLine("Inserisci il valore della variabile in input");
+            plainText = Console.ReadLine();
+
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            
 
             for (int i = 0; i < plainTextBytes.Length; i++)
             {
